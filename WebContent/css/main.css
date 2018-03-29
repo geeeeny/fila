@@ -1,0 +1,63 @@
+.menu{
+	padding: 5px 10px;
+	background: #0000a0;
+	overflow: hidden;
+	color: yellow;
+}
+.menu a{
+	margin-right: 10px;
+	color: white;
+}
+.left-menu{
+	float:left;
+}
+.right-menu{
+	float: right;
+}
+
+.login-form{
+	width: 400px;
+	margin: 50px auto;
+}
+.login-form input{
+	margin-bottom: 15px;
+}
+.join-form{
+	width: 600px;
+	margin: 50px auto;
+}
+.jumbotron a{
+	color: black;
+} 
+.jumbotron a>h1{
+	display: inline;
+}
+.bg-4 {
+	border-top: 0.5px solid #bfbfbf;
+	height: 100px;
+	width: 100%;
+}
+.thumb-pane {
+	display: inline-block;
+	width: 200px;
+	padding: 2px;
+}
+.container{
+	margin-bottom: 100px;
+}
+hr{
+	border: 0.5px solid #bfbfbf;
+}
+a:hover{
+	text-decoration: none;
+}
+.md-form{
+	margin:0;
+}
+#keyword {
+	display: inline-block;
+	width: 300px;
+}
+.error {
+	color: red;
+}
