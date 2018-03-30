@@ -11,7 +11,9 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import edu.iot.fila.service.ImageListService;
 import edu.iot.fila.service.ImageService;
+import edu.iot.fila.service.ImageServiceImpl;
 
 @WebServlet("/image")
 public class ImageServlet extends HttpServlet {
@@ -22,7 +24,7 @@ public class ImageServlet extends HttpServlet {
     public ImageServlet() {
         super();
 
-        ImageService service = ImageService.getInstance();
+        ImageService service = ImageServiceImpl.getInstance();
         map = new HashMap<>();
         map.put("thumb", service::sendThumb);
         map.put("image", service::sendImage);

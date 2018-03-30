@@ -33,7 +33,7 @@ $(function(){
 	<div class="login-form">
 		<h1 class="pb-4"><i class="fa fa-sign-in-alt"></i> 로그인</h1>
 		<form method="post">
-			<input type="hidden" name="url" value="${url}"> <!-- 로그인시 가고자했던 url저장하기 위함 -->
+			<input type="hidden" name="url" value="${url}"> <!-- 로그인시 가고자 했던 url저장하기 위함 -->
 			<div class="md-form">
 				<i class="fa fa-user prefix grey-text"></i>
 				<label for="userId">사용자 ID</label>

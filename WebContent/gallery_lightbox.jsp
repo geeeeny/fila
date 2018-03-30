@@ -39,12 +39,12 @@ $(function(){
 		<div class="row">
 			<c:forEach var="image" items="${list}" varStatus="status">
 				<div class="col-md-3 col-sm-4"> <!-- ImageServlet에 get방식으로 전달 -->
-					<a href="image?id=${status.index}&mode=image"
+					<a href="image?id=${image.imageId}&mode=image"
 						data-lightbox="roadtrip">
-						<img src="image?id=${status.index}&mode=thumb" alt="${image.title}">
+						<img src="image?id=${image.imageId}&mode=thumb" alt="${image.title}">
 					</a>
 					<p>
-						<a href="image?id=${status.index}&mode=download">
+						<a href="image?id=${image.imageId}&mode=download">
 							<i class="fa fa-download"></i>
 						</a>
 					</p>

@@ -12,6 +12,8 @@ import javax.servlet.http.HttpSession;
 
 import edu.iot.fila.model.Member;
 import edu.iot.fila.service.MemberService;
+import edu.iot.fila.service.MemberServiceImpl;
+import edu.iot.fila.service.MemberServiceMapImpl;
 import edu.iot.fila.util.Command;
 
 /**
@@ -32,7 +34,7 @@ public class JoinServlet extends HttpServlet {
 	}
 
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		MemberService service = MemberService.getInstance();
+		MemberService service = MemberServiceImpl.getInstance();
 		
 		//Member 구성 ?
 		//Member member = map(request);

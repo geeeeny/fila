@@ -12,6 +12,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import edu.iot.fila.model.Image;
+import edu.iot.fila.service.ImageListService;
 import edu.iot.fila.service.ImageService;
 
 /**
@@ -33,7 +34,7 @@ public class GalleryServlet extends HttpServlet {
 			page = "gallery_carousel.jsp";
 		}
 		
-		ImageService service = ImageService.getInstance();
+		ImageService service = ImageListService.getInstance();
 		List<Image> list = service.getImages();
 		
 		request.setAttribute("list", list); //속성 전달

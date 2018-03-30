@@ -4,7 +4,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-
+<link href="https://fonts.googleapis.com/css?family=Ubuntu:700" rel="stylesheet">
 <script>
 $(function(){
 
@@ -17,10 +17,8 @@ $(function(){
 <div class="menu">
 	<div class="left-menu">
 		<a href="${home}"><i class="fa fa-home"></i> Fila</a>
-		<c:if test="${not empty USER}">
-			<a href="gallery"><i class="fa fa-images"></i> Gallery</a>
-			<a href="flickr"><i class="fa fa-images"></i> Flickr</a>
-		</c:if>
+		<a href="gallery"><i class="fa fa-images"></i> Gallery</a>
+		<a href="flickr"><i class="fa fa-images"></i> Flickr</a>
 	</div>
 	<div class="right-menu">
 		<c:choose>
@@ -29,7 +27,7 @@ $(function(){
 				<a href="join"><i class="fa fa-user-plus"></i> 회원가입</a>
 			</c:when>
 			<c:otherwise>
-				<i class="fa fa-user"></i>${USER.userId}
+				<i class="fa fa-user"></i> ${USER.userId}
 				<a href="logout"><i class="fa fa-sign-in-alt"></i> 로그아웃</a>
 				<a href="profile"><i class="fa fa-edit"></i> 정보수정</a>
 			</c:otherwise>
@@ -37,7 +35,8 @@ $(function(){
 	</div>
 </div>
 <div class="jumbotron text-center">
-	<a href="${home}"><h1>FILA</h1></a>
+	<a href="${home}"><h1>FILA ;D</h1></a>
+	<p>lightbox / carousel / flickr</p>
 </div>
 </body>
 </html>

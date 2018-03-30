@@ -51,7 +51,7 @@
 			<!-- Indicators -->
 			<ul class="carousel-indicators">
 				<c:forEach items="${list}" varStatus="status">
-					<li data-target="#demo" data-slide-to="${status.index}" 
+					<li data-target="#demo" data-slide-to="${image.imageId}" 
 					<c:if test="${status.first}">class="active"</c:if>></li>
 				</c:forEach>
 			</ul>
@@ -61,7 +61,7 @@
 				<c:forEach var="image" items="${list}" varStatus="status">
 					<div class="carousel-item 
 							<c:if test="${status.first}">active</c:if>">
-						<img src="image?id=${status.index}&mode=image" alt="${image.title}">
+						<img src="image?id=${image.imageId}&mode=image" alt="${image.title}">
 					</div>
 				</c:forEach>
 			</div>

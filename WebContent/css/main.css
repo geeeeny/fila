@@ -1,8 +1,12 @@
+body{
+	font-family: 'Ubuntu', sans-serif;
+}
 .menu{
 	padding: 5px 10px;
-	background: #0000a0;
+	background: #319db9;
 	overflow: hidden;
 	color: yellow;
+	border: none;
 }
 .menu a{
 	margin-right: 10px;
@@ -26,11 +30,18 @@
 	width: 600px;
 	margin: 50px auto;
 }
+.jumbotron {
+	background-color: #3aaecb;
+	
+	color:white;
+}
 .jumbotron a{
-	color: black;
+	color: white;	
 } 
 .jumbotron a>h1{
 	display: inline;
+	border: none;
+	font-weight: bolder;
 }
 .bg-4 {
 	border-top: 0.5px solid #bfbfbf;

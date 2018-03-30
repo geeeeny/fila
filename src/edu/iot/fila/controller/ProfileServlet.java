@@ -12,6 +12,8 @@ import javax.servlet.http.HttpServletResponse;
 import edu.iot.fila.exception.PasswordNotMatchException;
 import edu.iot.fila.model.Member;
 import edu.iot.fila.service.MemberService;
+import edu.iot.fila.service.MemberServiceImpl;
+import edu.iot.fila.service.MemberServiceMapImpl;
 import edu.iot.fila.util.Command;
 
 @WebServlet("/profile")
@@ -33,7 +35,7 @@ public class ProfileServlet extends HttpServlet {
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		Member member = (Member)Command.parse(request, Member.class);
 		
-		MemberService service = MemberService.getInstance();
+		MemberService service = MemberServiceImpl.getInstance();
 		
 		try {
 			member = service.update(member);

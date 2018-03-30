@@ -12,6 +12,8 @@ import javax.servlet.http.HttpSession;
 
 import edu.iot.fila.model.Member;
 import edu.iot.fila.service.MemberService;
+import edu.iot.fila.service.MemberServiceImpl;
+import edu.iot.fila.service.MemberServiceMapImpl;
 import edu.iot.fila.util.Command;
 
 @WebServlet("/login")
@@ -44,7 +46,7 @@ public class LoginServlet extends HttpServlet {
 	}
 
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		MemberService service = MemberService.getInstance();
+		MemberService service = MemberServiceImpl.getInstance();
 		//Member member = map(request);
 		Member member = (Member)Command.parse(request, Member.class); //map의 동작을 해주는 라이브러리
 		Member m = service.checkLogin(member);
@@ -55,7 +57,7 @@ public class LoginServlet extends HttpServlet {
 			session.setAttribute("USER", m);
 			
 			//이동하고자 했던 페이지가 있으면 로그인 후 그 페이지로 이동한다.
-			if(url!=null) {
+			if(url!=null && !url.isEmpty()) {
 				response.sendRedirect(url);
 			}else {
 				response.sendRedirect("main.jsp"); //상대경로. 브라우저에서 루트는 ip:8080

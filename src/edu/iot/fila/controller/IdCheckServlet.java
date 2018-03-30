@@ -10,6 +10,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import edu.iot.fila.service.MemberService;
+import edu.iot.fila.service.MemberServiceImpl;
 
 @WebServlet("/idcheck")
 public class IdCheckServlet extends HttpServlet {
@@ -21,7 +22,7 @@ public class IdCheckServlet extends HttpServlet {
     }
 
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		MemberService service = MemberService.getInstance();
+		MemberService service = MemberServiceImpl.getInstance();
 		String userId = request.getParameter("userId");
 		boolean result = service.checkUserId(userId);
 		
