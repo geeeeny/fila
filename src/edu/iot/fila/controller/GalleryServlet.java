@@ -4,7 +4,6 @@ import java.io.IOException;
 import java.util.List;
 
 import javax.servlet.RequestDispatcher;
-import javax.servlet.ServletContext;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -12,8 +11,8 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import edu.iot.fila.model.Image;
-import edu.iot.fila.service.ImageListService;
 import edu.iot.fila.service.ImageService;
+import edu.iot.fila.service.ImageServiceImpl;
 
 /**
  * Servlet implementation class GalleryServlet
@@ -34,9 +33,9 @@ public class GalleryServlet extends HttpServlet {
 			page = "gallery_carousel.jsp";
 		}
 		
-		ImageService service = ImageListService.getInstance();
+		ImageService service = ImageServiceImpl.getInstance();
 		List<Image> list = service.getImages();
-		
+		System.out.println(list);
 		request.setAttribute("list", list); //속성 전달
 		RequestDispatcher dispatcher = request.getRequestDispatcher(page);
 		dispatcher.forward(request, response); //포워딩. 다른 페이지로 이동

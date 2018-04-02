@@ -15,3 +15,4 @@ create table IMAGES(
 
 select * from IMAGES;
 create sequence images_seq;
+delete images_seq;
